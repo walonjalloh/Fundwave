@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Hides scrollbar for WebKit browsers (Chrome, Safari) */
+.modal-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Hides scrollbar for Firefox */
+.modal-container {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar while keeping scrollability */
+.modal-container::-webkit-scrollbar-thumb {
+    background: transparent;
+}
