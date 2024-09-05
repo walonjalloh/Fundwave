@@ -6,7 +6,7 @@ import { FaRegComment } from "react-icons/fa";
 function CampaignDetail() {
   return (
     <section className="my-10 px-4 lg:px-16">
-      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6 lg:p-8">
+      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6 lg:p-8 border border-gray-200">
         <h1 className="text-3xl font-bold mb-2 text-gray-900">
           Clean Water for Rural Schools
         </h1>
