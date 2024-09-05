@@ -1,5 +1,6 @@
 import Campaign from "../components/Campaign"
 import NavbarSignedIn from "../components/NavbarSignedIn"
+import Footer from '../components/Footer'
 
 
 function CampaignCreation() {
@@ -7,6 +8,7 @@ function CampaignCreation() {
     <div>
         <NavbarSignedIn/>
         <Campaign/>
+        <Footer/>
     </div>
   )
 }

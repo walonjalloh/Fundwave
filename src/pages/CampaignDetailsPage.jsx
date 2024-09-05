@@ -1,5 +1,6 @@
 import NavbarSignedIn from "../components/NavbarSignedIn"
 import CampaignDetails from '../components/CampaignDetail'
+import Footer from '../components/Footer'
 
 
 function CampaignDetailsPage() {
@@ -7,6 +8,7 @@ function CampaignDetailsPage() {
     <div>
         <NavbarSignedIn/>
         <CampaignDetails/>
+        <Footer/>
     </div>
   )
 }
