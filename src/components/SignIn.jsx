@@ -23,15 +23,15 @@ function SignIn() {
                         <div className="flex justify-end my-2">
                             <p className="text-sm text-blue-400 font-thin">......forgot password</p>
                         </div>
-                        <div className="flex flex-col md:flex-row justify-center gap-10 my-8 items-center">
+                        <div className="flex flex-col md:flex-row justify-center gap-10 my-4 items-center">
                             <button className="border-2 border-blue-800 py-2 px-8 rounded-xl bg-blue-800 text-white text-xl font-bold ">Sign In</button>
-                            <button className="border-2 border-black/50 py-2 px-8 rounded-xl  text-black text-xl font-bold ">Sign Up</button>
+                            {/* <button className="border-2 border-black/50 py-2 px-8 rounded-xl  text-black text-xl font-bold ">Sign Up</button> */}
                         </div>
                     </form>
                 </div>
                 <div>
                     <div className="flex flex-col items-center">
-                        <p className="text-center my-4 font-semibold text-2xl underline">or continue with</p>
+                        <p className="text-center mb-2 font-semibold text-2xl underline">or continue with</p>
                         <div className="flex flex-col gap-5 md:flex-row md:gap-10 mb-10">
                             <div className="flex border-2 border-black/50  rounded-xl h-fit justify-center gap-2 items-center py-3 px-6">
                                 <GoogleIcon className='h-16 w-16 text-blue-400'/>
