@@ -1,14 +1,18 @@
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import logo from '../assets/logo.png'
 
 
 function SignIn() {
   return (
-    <section className="my-10">
+    <section className="">
         <div className="flex items-center justify-center">
             <div className="flex flex-col justify-center items-center  rounded-xl   px-12 md:px-20 border-black/50 w-fit">
+                <div className='flex flex-row justify-start items-start'>
+                    <img src={logo} alt="logo" />
+                </div>
                 <div className="text-center text-4xl font-bold my-10">
-                    <h1>Sign In</h1>
+                    <h1 className='underline font-semibold tracking-tight '>Welcome back, sign in to continue</h1>
                 </div>
                 <div className="flex flex-col items-start justify-start">
                     <form action="">
