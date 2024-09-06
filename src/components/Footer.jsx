@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { logo } from "../assets/assets"
 
 function Footer() {
@@ -13,8 +14,9 @@ function Footer() {
           </div>
           <div className="flex flex-col gap-2 md:flex-row text-center md:gap-4 font-light ">
             <p>Terms of Service</p>
-            <p>Privacy Policy</p>
+            <Link to='/policy'><p>Privacy Policy</p></Link>
             <p>Contact us</p>
+            <Link to='/about_us'><p>About Us</p></Link>
           </div>
         </div>
     </footer>
