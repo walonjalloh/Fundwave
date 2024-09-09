@@ -30,9 +30,9 @@ function FeaturedCampaign() {
             </p>
             <Link to='/campaigndetails'><p className="text-center text-blue-700">learn more...</p></Link>
             <div className="flex justify-between items-center mt-6 px-4">
-              <button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors">
+              <Link to='/payment'><button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors">
                 Support
-              </button>
+              </button></Link>
               <div className="flex gap-4 text-xl text-gray-600">
                 <FaXTwitter className="hover:text-blue-500 transition-colors" />
                 <FaFacebookF className="hover:text-blue-500 transition-colors" />
@@ -42,9 +42,9 @@ function FeaturedCampaign() {
         ))}
       </div>
       <div className="flex items-center justify-center mt-10">
-        <button className="bg-gray-200 text-gray-700 py-3 px-8 rounded-full shadow-md hover:bg-gray-300 transition-colors font-medium">
+        <Link to='/explore'><button className="bg-gray-200 text-gray-700 py-3 px-8 rounded-full shadow-md hover:bg-gray-300 transition-colors font-medium">
           See more
-        </button>
+        </button></Link>
       </div>
     </section>
   );

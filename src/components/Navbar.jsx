@@ -32,7 +32,8 @@ function Navbar() {
                         <Link to='/'>
                         <img src={logo} alt="logo" className=" w-[100px]" />
                         </Link>
-                        <p className="font-thin hidden md:flex ">How it works</p>
+                        <Link to='/how_it_works'><p className="font-thin hidden md:flex ">How it works</p>
+                        </Link>
                     </div>
                     <div className="hidden md:flex items-center gap-3 lg:gap-5">
                         <input 
