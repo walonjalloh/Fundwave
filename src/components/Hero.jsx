@@ -28,9 +28,9 @@ function Hero() {
           </Link>
           
           
-            <button className="border-2 mx-2 border-white bg-white shadow-xl py-2 px-4 rounded-md md:text-xl font-bold">
+            <Link to='/explore'><button className="border-2 mx-2 border-white bg-white shadow-xl py-2 px-4 rounded-md md:text-xl font-bold">
               Explore Projects
-            </button>
+            </button></Link>
           
         </div>
       </div>

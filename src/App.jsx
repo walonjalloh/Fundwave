@@ -5,6 +5,12 @@ import CampaignCreation from "./pages/CampaignCreation"
 import CampaignDetailsPage from "./pages/CampaignDetailsPage"
 import About from "./pages/About"
 import PolicyPage from "./pages/PolicyPage"
+import ExplorePage from "./pages/ExplorePage"
+import ProfliePages from "./pages/ProfliePages"
+
+
+
+
 
 
 function App() {
@@ -17,8 +23,11 @@ function App() {
         <Route path="/campaigndetails" element={<CampaignDetailsPage/>}/>
         <Route path="/about_us" element={<About/>}/>
         <Route path="/policy" element={<PolicyPage/>}/>
+        <Route path="/explore" element={<ExplorePage/>}/>
+        <Route path="/profile" element={<ProfliePages/>}/>
       </Routes>
     </Router>
+
   )
 }
 

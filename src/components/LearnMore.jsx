@@ -20,7 +20,7 @@ export default function AboutUs() {
     <div className="container mx-auto px-4 py-8">
       {/* Header Section */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold mb-4">About FundHope</h1>
+        <h1 className="text-4xl font-extrabold mb-4">DreamFund</h1>
         <p className="text-xl text-gray-600">Empowering dreams, one donation at a time</p>
       </header>
 
@@ -43,7 +43,7 @@ export default function AboutUs() {
               alt="People collaborating on a fundraising campaign"
               className="rounded-lg object-cover w-full h-full"
             />
-          </div>
+          </div>git
         </div>
       </section>
 

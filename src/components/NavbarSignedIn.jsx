@@ -23,8 +23,10 @@ function NavbarSignedIn() {
                     </Link>
                 </div>
                 <div className="hidden md:flex gap-10 items-center">
-                    <p className="font-semibold">Explore</p>
-                    <p className="font-semibold">Profile</p>
+                    <Link to='/explore'><p className="font-semibold">Explore</p>
+                    </Link>
+                    <Link to='/profile'><p className="font-semibold">Profile</p>
+                    </Link>
                 </div>
                 <div className="flex md:hidden">
                 <Menu onClick={hanldeopen} className="cursor-pointer" />
@@ -33,8 +35,8 @@ function NavbarSignedIn() {
         </nav>
         {isOpen && (
               <div className="flex flex-col md:hidden gap-2 items-center">
-              <p className="font-semibold">Explore</p>
-              <p className="font-semibold">Profile</p>
+              <Link to='/explore'><p className="font-semibold">Explore</p></Link>
+              <Link to='/profile'><p className="font-semibold">Profile</p></Link>
           </div>
         )}
     </header>

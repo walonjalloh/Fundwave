@@ -1,6 +1,7 @@
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
 
 
 function SignIn() {
@@ -28,7 +29,7 @@ function SignIn() {
                             <p className="text-sm text-blue-400 font-thin">......forgot password</p>
                         </div>
                         <div className="flex flex-col md:flex-row justify-center gap-10 my-4 items-center">
-                            <button className="border-2 border-blue-800 py-2 px-8 rounded-xl bg-blue-800 text-white text-xl font-bold ">Sign In</button>
+                            <Link to='/profile'><button className="border-2 border-blue-800 py-2 px-8 rounded-xl bg-blue-800 text-white text-xl font-bold ">Sign In</button></Link>
                             {/* <button className="border-2 border-black/50 py-2 px-8 rounded-xl  text-black text-xl font-bold ">Sign Up</button> */}
                         </div>
                     </form>
