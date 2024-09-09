@@ -7,21 +7,21 @@ export default function PolicyPage() {
     general: [
       {
         title: "Platform Overview",
-        content: "FundHope is a crowdfunding platform designed to help individuals and organizations raise funds for various causes. By using our platform, you agree to comply with all applicable laws and our policies."
+        content: "FundWave is a crowdfunding platform designed to help individuals and organizations raise funds for various causes. By using our platform, you agree to comply with all applicable laws and our policies."
       },
       {
         title: "User Responsibilities",
-        content: "Users are responsible for the content they post on FundHope. This includes campaign descriptions, updates, and comments. All content must be accurate, lawful, and not infringe on any third-party rights."
+        content: "Users are responsible for the content they post on FundWave. This includes campaign descriptions, updates, and comments. All content must be accurate, lawful, and not infringe on any third-party rights."
       },
       {
         title: "Prohibited Content",
-        content: "FundHope prohibits campaigns that promote illegal activities, hate speech, violence, or discrimination. We also do not allow fraudulent or misleading campaigns."
+        content: "FundWave prohibits campaigns that promote illegal activities, hate speech, violence, or discrimination. We also do not allow fraudulent or misleading campaigns."
       }
     ],
     fundraising: [
       {
         title: "Campaign Creation",
-        content: "Anyone can create a campaign on FundHope, provided they comply with our policies. Campaigns must clearly state their purpose and intended use of funds."
+        content: "Anyone can create a campaign on FundWave, provided they comply with our policies. Campaigns must clearly state their purpose and intended use of funds."
       },
       {
         title: "Funding Goals",
@@ -35,7 +35,7 @@ export default function PolicyPage() {
     donations: [
       {
         title: "Donor Protection",
-        content: "FundHope takes donor protection seriously. We use secure payment processing and do not store credit card information. In cases of suspected fraud, we may refund donations and suspend campaigns."
+        content: "FundWave takes donor protection seriously. We use secure payment processing and do not store credit card information. In cases of suspected fraud, we may refund donations and suspend campaigns."
       },
       {
         title: "Refund Policy",
@@ -43,7 +43,7 @@ export default function PolicyPage() {
       },
       {
         title: "Fees",
-        content: "FundHope charges a small platform fee and payment processing fee on each donation. These fees help us maintain and improve our services. Exact fee structures are detailed in our Terms of Service."
+        content: "FundWave charges a small platform fee and payment processing fee on each donation. These fees help us maintain and improve our services. Exact fee structures are detailed in our Terms of Service."
       }
     ],
     privacy: [
@@ -57,14 +57,14 @@ export default function PolicyPage() {
       },
       {
         title: "Data Protection",
-        content: "FundHope employs industry-standard security measures to protect user data. This includes encryption, secure servers, and regular security audits."
+        content: "FundWave employs industry-standard security measures to protect user data. This includes encryption, secure servers, and regular security audits."
       }
     ]
   };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-6 text-center">FundHope Policies</h1>
+      <h1 className="text-4xl font-bold mb-6 text-center">FundWave Policies</h1>
       <p className="text-xl text-gray-600 mb-8 text-center">
         Our commitment to transparency, safety, and trust.
       </p>

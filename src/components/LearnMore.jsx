@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom';
 
 export default function AboutUs() {
   const impactStats = [
-    { icon: HeartIcon, value: "10M+", label: "Campaigns Funded" },
-    { icon: UsersIcon, value: "50M+", label: "Donors" },
-    { icon: TrendingUpIcon, value: "$5B+", label: "Raised" },
-    { icon: ShieldCheckIcon, value: "190+", label: "Countries & Regions" },
+    { icon: HeartIcon, value: "10+", label: "Campaigns Funded" },
+    { icon: UsersIcon, value: "50+", label: "Donors" },
+    { icon: TrendingUpIcon, value: "NLe50+", label: "Raised" },
+    { icon: ShieldCheckIcon, value: "4+", label: "Countries & Regions" },
   ];
 
   const teamMembers = [
-    { name: "Emma Thompson", role: "CEO & Co-founder", image: "/placeholder.svg" },
-    { name: "Michael Chen", role: "CTO & Co-founder", image: "/placeholder.svg" },
-    { name: "Sarah Patel", role: "Head of Community", image: "/placeholder.svg" },
-    { name: "David Kim", role: "Lead Developer", image: "/placeholder.svg" },
+    { name: "Mohamed Lamin Walon-Jalloh", role: "CEO & Co-founder, lead developer", image: "/placeholder.svg" },
+    { name: "Alusine Swaray", role: "AI prompter & Co-founder", image: "/placeholder.svg" },
+    { name: "Nematulia Barrie", role: "Head of Communication", image: "/placeholder.svg" },
+    { name: "Ibrahim Jalloh", role: "Lead Designer", image: "/placeholder.svg" },
   ];
 
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header Section */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold mb-4">DreamFund</h1>
+        <h1 className="text-4xl font-extrabold mb-4">FundWave</h1>
         <p className="text-xl text-gray-600">Empowering dreams, one donation at a time</p>
       </header>
 
@@ -30,7 +30,7 @@ export default function AboutUs() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <p className="text-lg mb-4">
-              At FundHope, we believe in the power of community to change lives. Our mission is to create a platform where compassion meets action, enabling individuals and organizations to raise funds for causes that matter most to them.
+              At FundWave, we believe in the power of community to change lives. Our mission is to create a platform where compassion meets action, enabling individuals and organizations to raise funds for causes that matter most to them.
             </p>
             <p className="text-lg mb-4">
               Whether it is helping a family in need, supporting a local charity, or funding a groundbreaking project, we are here to make fundraising accessible, transparent, and impactful.
@@ -43,7 +43,7 @@ export default function AboutUs() {
               alt="People collaborating on a fundraising campaign"
               className="rounded-lg object-cover w-full h-full"
             />
-          </div>git
+          </div>
         </div>
       </section>
 
@@ -61,22 +61,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-semibold mb-6">How It Works</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {["Start Your Campaign", "Share with Friends", "Manage Donations"].map((title, index) => (
-            <div key={index} className="bg-white shadow-lg p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-2">{index + 1}. {title}</h3>
-              <p>
-                {index === 0 && "Create your fundraiser in minutes. Set your goal, tell your story, and add photos and videos."}
-                {index === 1 && "Spread the word on social media and email. We will provide you with tools to maximize your reach."}
-                {index === 2 && "Receive donations quickly and easily. Keep supporters engaged with updates and thank-you notes."}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+    
 
       {/* Team Section */}
       <section className="mb-16">
@@ -103,7 +88,7 @@ export default function AboutUs() {
         <h2 className="text-3xl font-semibold mb-6">Our Commitment</h2>
         <div className="bg-white shadow-lg p-6 rounded-lg">
           <p className="text-lg">
-            At FundHope, we are committed to providing a secure, transparent, and user-friendly platform for all your fundraising needs. We believe in the power of community and the impact of collective giving. Our dedicated team works tirelessly to ensure that every campaign gets the support it deserves, and every donor feels confident in their contribution.
+            At FundWave, we are committed to providing a secure, transparent, and user-friendly platform for all your fundraising needs. We believe in the power of community and the impact of collective giving. Our dedicated team works tirelessly to ensure that every campaign gets the support it deserves, and every donor feels confident in their contribution.
           </p>
           <div className="mt-4">
             <Link to='/policy'>            <button className="border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50">Learn About Our Policies</button>
