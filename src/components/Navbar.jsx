@@ -67,7 +67,8 @@ function Navbar() {
                         placeholder="Search" 
                         className="border-2 border-gray-300 w-full px-2 py-1 rounded-md focus:outline-none" 
                     />
-                    <p className="font-thin text-center text-blue-500">How it work</p>
+                    <Link to='/how_it_works'><p className="font-thin text-center text-blue-500">How it work</p>
+                    </Link>
                     <button 
                         className="border-2 border-gray-800 px-4 py-2 text-sm rounded-md"
                         onClick={handleLoginModalOpen}
