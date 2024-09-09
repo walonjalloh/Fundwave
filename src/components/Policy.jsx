@@ -63,16 +63,16 @@ export default function PolicyPage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-6 text-center">FundWave Policies</h1>
-      <p className="text-xl text-gray-600 mb-8 text-center">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-center">FundWave Policies</h1>
+      <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 text-center">
         Our commitment to transparency, safety, and trust.
       </p>
 
       {/* Policy Highlights */}
-      <div className="bg-white shadow-md rounded-lg p-6 mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Policy Highlights</h2>
-        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+      <div className="bg-white shadow-md rounded-lg p-4 sm:p-6 mb-6 sm:mb-8">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Policy Highlights</h2>
+        <ul className="list-disc pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
           <li>We prioritize the safety and security of our users and their data.</li>
           <li>All campaigns must be honest, legal, and clearly state their purpose.</li>
           <li>We do not allow fraudulent or misleading campaigns.</li>
@@ -82,12 +82,12 @@ export default function PolicyPage() {
       </div>
 
       {/* Tabs for Policies */}
-      <div className="mb-8">
-        <div className="flex space-x-4 border-b">
+      <div className="mb-6 sm:mb-8">
+        <div className="flex flex-wrap sm:flex-nowrap space-x-2 sm:space-x-4 border-b overflow-x-auto">
           {Object.keys(policies).map((tab) => (
             <button
               key={tab}
-              className={`py-2 px-4 text-lg font-semibold ${
+              className={`py-2 px-3 sm:px-4 text-sm sm:text-base font-semibold whitespace-nowrap ${
                 activeTab === tab ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
               }`}
               onClick={() => setActiveTab(tab)}
@@ -98,23 +98,20 @@ export default function PolicyPage() {
         </div>
 
         {/* Tab Content */}
-        <div className="mt-4 bg-white shadow-md rounded-lg p-6">
-          <h3 className="text-xl font-semibold mb-4 capitalize">
+        <div className="mt-4 bg-white shadow-md rounded-lg p-4 sm:p-6">
+          <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 capitalize">
             {activeTab} Policies
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {policies[activeTab].map((policy, index) => (
-              <div key={index} className="border-b pb-4 mb-4">
-                <h4 className="text-lg font-semibold mb-2">{policy.title}</h4>
-                <p className="text-gray-700">{policy.content}</p>
+              <div key={index} className="border-b pb-3 sm:pb-4 mb-3 sm:mb-4">
+                <h4 className="text-base sm:text-lg font-semibold mb-2">{policy.title}</h4>
+                <p className="text-sm sm:text-base text-gray-700">{policy.content}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-
-      
-    
     </div>
   );
 }
