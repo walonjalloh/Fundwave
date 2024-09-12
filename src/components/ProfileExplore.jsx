@@ -9,35 +9,7 @@ export default function ExploreCampaigns() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1 py-12 bg-gray-100">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="text-3xl font-bold mb-6">Explore Campaigns</h1>
-          <div className="flex flex-col md:flex-row gap-4 mb-8">
-            <div className="relative flex-grow">
-              <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              <input
-                className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                type="text"
-                placeholder="Search campaigns..."
-              />
-            </div>
-            <select
-              className="w-full md:w-[180px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="all">All Categories</option>
-              <option value="education">Education</option>
-              <option value="healthcare">Healthcare</option>
-              <option value="environment">Environment</option>
-              <option value="technology">Technology</option>
-              <option value="community">Community</option>
-            </select>
-            <select
-              className="w-full md:w-[180px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="most-funded">Most Funded</option>
-              <option value="newest">Newest</option>
-              <option value="end-date">End Date</option>
-            </select>
-          </div>
-
+            <p className='text-center text-2xl font-bold mb-10'>My Campaigns</p>
           <div className="space-y-6">
             {campaigns.map((campaign) => (
               <div key={campaign.id} className="bg-white rounded-lg shadow-md overflow-hidden">

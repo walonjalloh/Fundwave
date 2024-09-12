@@ -1,13 +1,13 @@
 
 import Explore from  "../components/Explore"
 import Footer from "../components/Footer"
-import Navbar2 from "../components/Navbar2"
+import NavbarSignedIn from "../components/NavbarSignedIn"
 
 
 function ExplorePage() {
   return (
     <div>
-        <Navbar2/>
+        <NavbarSignedIn/>
         <Explore/>
         <Footer/>
     </div>

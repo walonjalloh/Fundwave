@@ -9,9 +9,10 @@ import ExplorePage from "./pages/ExplorePage"
 import ProfliePages from "./pages/ProfliePages"
 import HowItWorksPage from "./pages/HowItWorksPage"
 import PaymentPage from "./pages/PaymentPage"
-import Confirmation from "./components/Confirmation"
 import ConfirmationPage from "./pages/ConfirmationPage"
-
+import ProfileCampaign from "./pages/ProfileCampaign"
+import ExploreSignIn from './pages/ExploreSignIn'
+import DashboardPage from "./pages/DashboardPage"
 
 
 
@@ -32,6 +33,9 @@ function App() {
         <Route path="/how_it_works" element={<HowItWorksPage/>}/>
         <Route path="/payment" element={<PaymentPage/>}/>
         <Route path="/confirmation" element={<ConfirmationPage/>}/>
+        <Route path="/profile_campaign" element={<ProfileCampaign/>}/>
+        <Route path="/explore_signIn" element={<ExploreSignIn/>}/>
+        <Route path="/dashboard" element={<DashboardPage/>}/>
       </Routes>
     </Router>
   )
