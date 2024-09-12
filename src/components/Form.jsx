@@ -1,4 +1,5 @@
 import { g2_logo, f_logo } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 function Form() {
   return (
@@ -96,12 +97,14 @@ function Form() {
         </div>
 
         {/* Submit Button */}
-        <button
+      <Link to='/confirmation' className="w-full">
+      <button
           type="submit"
           className="mt-6 w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 shadow-md transition-all"
         >
           Sign Up
         </button>
+      </Link>
       </form>
     </div>
   );

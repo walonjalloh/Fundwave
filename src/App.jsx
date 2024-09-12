@@ -9,6 +9,8 @@ import ExplorePage from "./pages/ExplorePage"
 import ProfliePages from "./pages/ProfliePages"
 import HowItWorksPage from "./pages/HowItWorksPage"
 import PaymentPage from "./pages/PaymentPage"
+import Confirmation from "./components/Confirmation"
+import ConfirmationPage from "./pages/ConfirmationPage"
 
 
 
@@ -29,6 +31,7 @@ function App() {
         <Route path="/profile" element={<ProfliePages/>}/>
         <Route path="/how_it_works" element={<HowItWorksPage/>}/>
         <Route path="/payment" element={<PaymentPage/>}/>
+        <Route path="/confirmation" element={<ConfirmationPage/>}/>
       </Routes>
     </Router>
   )
