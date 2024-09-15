@@ -35,10 +35,10 @@ function NavbarSignedIn() {
             </div>
         </nav>
         {isOpen && (
-              <div className="flex flex-col md:hidden gap-2 items-center">
-              <Link to='/explore'><p className="font-semibold">Explore</p></Link>
-              <Link to='/profile'><p className="font-semibold">Profile</p></Link>
-              <Link to='/dashboard'><p className="font-semibold">Dashboard</p></Link>
+              <div className="flex flex-col md:hidden   mx-4 gap-4 pb-4">
+              <Link to='/explore'><button className="border-2 border-gray-800 px-4 py-2 text-sm rounded-md w-full">Explore</button></Link>
+              <Link to='/profile'><button className="border-2 border-gray-800 px-4 py-2 text-sm rounded-md w-full">Profile</button></Link>
+              <Link to='/dashboard'><button className="border-2 border-gray-800 px-4 py-2 text-sm rounded-md w-full">Dashboard</button></Link>
           </div>
         )}
     </header>

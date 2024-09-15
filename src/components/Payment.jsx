@@ -21,7 +21,7 @@ export default function Payment() {
                 </div>
                 <div className="flex justify-between text-gray-600">
                   <span>Amount:</span>
-                  <span className="font-medium">$50.00 USD</span>
+                  <span className="font-medium">NLe50</span>
                 </div>
               </div>
 
@@ -144,7 +144,7 @@ export default function Payment() {
 
             <div className="mt-6">
               <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Securely Pay $50.00
+                Securely Pay NLe50
               </button>
               <p className="text-xs text-center text-gray-500 mt-4">
                 Your payment is secured by industry-standard encryption.
