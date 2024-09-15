@@ -16,7 +16,7 @@ export default function UserProfile() {
           throw new Error('No authentication token found');
         }
 
-        const response = await fetch('http://localhost:3800/api/users/aswaray650@gmail.com', {
+        const response = await fetch('http://localhost:3800/users/aswaray650@gmail.com', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

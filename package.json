@@ -4,8 +4,8 @@
     "scripts": {
       "build": "npm run build:frontend && npm run build:backend",
       "build:frontend": "cd Frontend && npm install && npm run build",
-      "build:backend": "cd Backend && npm install",
-      "vercel-build" : "npm run build:frontend"
+      "build:backend": "cd Backend && npm install && npm start",
+      "vercel-build" : "npm run build:front"
     }
   }
   
