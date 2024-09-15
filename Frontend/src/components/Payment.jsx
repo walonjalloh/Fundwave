@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import soladdress from '../assets/soladdress.jpg'
 
 export default function Payment() {
   const [paymentMethod, setPaymentMethod] = useState('card');
@@ -130,7 +131,7 @@ export default function Payment() {
                 <div className="space-y-4">
                   <div className="bg-gray-900 p-4 rounded-lg flex items-center justify-center">
                     <img
-                      src="/placeholder.svg?height=200&width=200"
+                      src={soladdress}
                       alt="Solana QR Code"
                       className="w-48 h-48"
                     />

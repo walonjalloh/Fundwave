@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Edit, Mail, MapPin, Phone } from "lucide-react";
+import { aprof } from '../assets/assets';
 
 export default function UserProfile() {
   const [profileData, setProfileData] = useState(null);
@@ -20,7 +21,6 @@ export default function UserProfile() {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
           },
         });
 
@@ -78,7 +78,7 @@ export default function UserProfile() {
             <div className="bg-white p-6 rounded-lg shadow-md lg:col-span-2">
               <div className="flex items-center gap-4">
                 <img
-                  src="/api/placeholder/80/80"
+                  src={aprof}
                   alt={`${profileData.firstName} ${profileData.lastName}`}
                   className="w-20 h-20 rounded-full object-cover"
                 />

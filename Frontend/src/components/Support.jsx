@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, Heart, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { water } from '../assets/assets';
 
 const SupportCampaign = () => {
   const [donationAmount, setDonationAmount] = useState('');
@@ -12,7 +13,7 @@ const SupportCampaign = () => {
     goal: 10000,
     daysLeft: 30,
     backers: 250,
-    image: "/placeholder-campaign.jpg",
+    image: water,
   };
 
   const predefinedAmounts = [10, 25, 50];
@@ -40,8 +41,8 @@ const SupportCampaign = () => {
                   ></div>
                 </div>
                 <div className="flex justify-between text-sm mb-4">
-                  <span className="font-medium">${campaign.raised.toLocaleString()} raised</span>
-                  <span className="text-gray-500">${campaign.goal.toLocaleString()} goal</span>
+                  <span className="font-medium">NLe{campaign.raised.toLocaleString()} raised</span>
+                  <span className="text-gray-500">NLe{campaign.goal.toLocaleString()} goal</span>
                 </div>
                 <div className="flex justify-between text-sm text-gray-500">
                   <div className="flex items-center">
@@ -72,7 +73,7 @@ const SupportCampaign = () => {
                             : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                         }`}
                       >
-                        ${amount}
+                        NLe{amount}
                       </button>
                     ))}
                   </div>

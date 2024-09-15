@@ -68,9 +68,9 @@ export default function ExploreCampaigns() {
                       </div>
                       <div className="flex justify-between text-sm mt-2">
                         <span className="font-medium">
-                          ${campaign.raised.toLocaleString()} raised
+                          NLe{campaign.raised.toLocaleString()} raised
                         </span>
-                        <span className="text-gray-500">${campaign.goal.toLocaleString()} goal</span>
+                        <span className="text-gray-500">NLe{campaign.goal.toLocaleString()} goal</span>
                       </div>
                     </div>
                     <div className="flex justify-between text-sm text-gray-500 mb-4">

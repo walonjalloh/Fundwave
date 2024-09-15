@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, MessageCircle, Share2, ThumbsUp, Users, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { water } from '../assets/assets';
 
 const CampaignDetails = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -21,7 +22,7 @@ const CampaignDetails = () => {
                   <h1 className="text-2xl font-bold mb-2">Clean Water for Rural Schools</h1>
                   <p className="text-gray-600 mb-4">Help us bring clean water to 10 rural schools in Tanzania</p>
                   <img
-                    src="/placeholder.svg"
+                    src={water}
                     alt="Campaign Image"
                     className="w-full h-[300px] object-cover rounded-lg mb-6"
                   />

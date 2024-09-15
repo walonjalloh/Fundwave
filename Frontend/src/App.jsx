@@ -15,7 +15,7 @@ import ExploreSignIn from './pages/ExploreSignIn'
 import DashboardPage from "./pages/DashboardPage"
 import { AuthProvider } from "./components/AuthContext"
 import SupportPage from "./pages/SupportPage"
-
+import ContactUsPage from "./pages/ContactUsPage"
 
 
 
@@ -39,7 +39,7 @@ function App() {
           <Route path="/explore_signIn" element={<ExploreSignIn />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/support" element={<SupportPage />} />
-
+          <Route path="/contact_us" element={<ContactUsPage/>} />
         </Routes>
       </Router>
   )
