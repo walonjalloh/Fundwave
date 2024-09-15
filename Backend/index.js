@@ -9,7 +9,7 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
 const app = express()
-const port = 3800
+const port = process.env.PORT || 3800
 
 config()
 
@@ -245,6 +245,8 @@ app.get('/user/campaigns', auth, async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`)
 })
+
+export default app
 
 
 module.exports = app;
