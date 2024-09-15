@@ -4,6 +4,8 @@ import logo from '../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
+
+
 function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,7 +20,7 @@ function SignIn() {
     const data = { email, password };
 
     try {
-      const response = await fetch('http://localhost:3800/users/signin', {
+      const response = await fetch('http://localhost:3800/api/users/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

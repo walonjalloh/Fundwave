@@ -33,7 +33,7 @@ function Form() {
     };
 
     try {
-      const response = await fetch('http://localhost:3800/users/signup', { // Added http:// to the URL
+      const response = await fetch('http://localhost:3800/api/users/signup', { // Added http:// to the URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
