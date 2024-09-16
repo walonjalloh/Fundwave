@@ -11,6 +11,11 @@ import water from './water.jpg'
 import aprof from './aprof.jpg'
 import cancer from './cancer.jpg'
 import clean from './clean.jpg'
+import walon from './walon.jpg'
+import swaray from './swaray.jpg'
+import nema from './nema.jpg'
+import tjalloh from './tjalloh.jpg'
+import funding from './funding.png'
 
 export {
     logo,
@@ -25,5 +30,10 @@ export {
     bootcamp,
     aprof,
     cancer,
-    clean
+    clean,
+    walon,
+    swaray,
+    tjalloh,
+    nema,
+    funding
 }

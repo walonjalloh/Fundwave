@@ -108,15 +108,15 @@ const ContactUs = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <FaEnvelope className="text-blue-600 mr-3" />
-                  <span>support@gofundmeclone.com</span>
+                  <span>fundwavesl@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <FaPhone className="text-blue-600 mr-3" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+232-75-123-456</span>
                 </div>
                 <div className="flex items-center">
                   <FaMapMarkerAlt className="text-blue-600 mr-3" />
-                  <span>123 Fundraiser St, San Francisco, CA 94105</span>
+                  <span>123 Christex Corner</span>
                 </div>
               </div>
             </div>

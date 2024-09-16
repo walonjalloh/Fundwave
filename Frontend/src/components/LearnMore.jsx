@@ -1,5 +1,6 @@
 import { HeartIcon, UsersIcon, TrendingUpIcon, ShieldCheckIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { walon,nema,tjalloh,swaray,funding } from '../assets/assets';
 
 export default function AboutUs() {
   const impactStats = [
@@ -10,10 +11,10 @@ export default function AboutUs() {
   ];
 
   const teamMembers = [
-    { name: "Mohamed Lamin Walon-Jalloh", role: "CEO & Co-founder, lead developer", image: "/placeholder.svg" },
-    { name: "Alusine Swaray", role: "AI prompter & Co-founder", image: "/placeholder.svg" },
-    { name: "Nematulia Barrie", role: "Head of Communication", image: "/placeholder.svg" },
-    { name: "Ibrahim Jalloh", role: "Lead Designer", image: "/placeholder.svg" },
+    { name: "Mohamed Lamin Walon-Jalloh", role: "CEO & Co-founder, lead developer", image: walon },
+    { name: "Alusine Swaray", role: "AI prompter & Co-founder", image:swaray },
+    { name: "Nematulia Barrie", role: "Head of Communication", image: nema },
+    { name: "Ibrahim Jalloh", role: "Lead Designer", image: tjalloh },
   ];
 
   return (
@@ -39,7 +40,7 @@ export default function AboutUs() {
           </div>
           <div className="relative h-64 md:h-full">
             <img
-              src="/placeholder.svg"
+              src={funding}
               alt="People collaborating on a fundraising campaign"
               className="rounded-lg object-cover w-full h-full"
             />

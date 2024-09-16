@@ -88,7 +88,7 @@ const campaigns = [
       goal: 10000,
       daysLeft: 30,
       backers: 250,
-      category: "Education",
+      category: "Community",
       image: water,
     }
   ];
