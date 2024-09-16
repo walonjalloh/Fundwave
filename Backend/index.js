@@ -11,6 +11,13 @@ import jwt from 'jsonwebtoken'
 const app = express()
 const port = 3800
 
+
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => console.log(`Server running on port ${port}`));
+}
+
 config()
 
 connectDB()
