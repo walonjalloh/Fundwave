@@ -9,7 +9,7 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
 const app = express()
-const port = process.env.PORT || 3800
+const port = 3800
 
 config()
 
