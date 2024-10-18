@@ -110,6 +110,7 @@ export const AuthProvider = ({ children }) => {
       console.log(response.data.user);
       setUser(user.concat(response.data.user));
       toast("user login successfull");
+      navigate('/')
       setIsAuthenticated(!isAuthenticated);
       setUserLogin(!userLogin)
       setEmail("");
