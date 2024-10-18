@@ -5,7 +5,7 @@ import Layout from "./components/Layout";
 import HomePage from './pages/HomePage'
 import HowItWorks from "./components/HowItWorks";
 import LearnMore from "./components/LearnMore";
-import SignUp from "./components/SignUp";
+import Signup from "./components/SignUp";
 import Policy from "./components/Policy";
 import ContactUs from "./components/ContactUs";
 import Explore from "./components/Explore";
@@ -32,7 +32,7 @@ function App() {
           <Route index element={<HomePage/>}/>
           <Route path='/how_it_works' element={<HowItWorks/>}/>
           <Route path='/about_us' element={<LearnMore/>}/>
-          <Route path='/register' element={<SignUp/>}/>
+          <Route path='/register' element={<Signup/>}/>
           <Route path='/policy' element={<Policy/>}/>
           <Route path='/contact_us' element={<ContactUs/>}/>
           <Route path='/explore' element={<Explore/>}/>
