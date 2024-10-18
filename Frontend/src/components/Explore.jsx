@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
-import { Calendar, Search, Shield, Users } from "lucide-react";
-import { campaigns } from '../../utils/cards';
+import { Calendar, Search, Users } from "lucide-react";
+import holder from '../assets/holder.png'
+import { useContext } from 'react';
+import AuthContext from '../context/AuthContext';
 
 export default function ExploreCampaigns() {
+  const {campaignList} = useContext(AuthContext)
   
 
   return (
@@ -39,48 +42,40 @@ export default function ExploreCampaigns() {
           </div>
 
           <div className="space-y-6">
-            {campaigns.map((campaign) => (
-              <div key={campaign.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            {campaignList.map((campaign) => (
+              <div key={campaign._id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="md:flex">
                   <div className="md:w-1/3">
                     <img
-                      src={campaign.image}
-                      alt={campaign.title}
+                      src={holder}
+                      alt={campaign.campaignName}
                       className="h-48 w-full object-cover md:h-full"
                     />
                   </div>
                   <div className="md:w-2/3 p-6">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h2 className="text-xl font-bold mb-1">{campaign.title}</h2>
-                        <p className="text-gray-600">{campaign.description}</p>
+                        <h2 className="text-xl font-bold mb-1">{campaign.campaignName}</h2>
+                        <p className="text-gray-600">{campaign.campaignDescription}</p>
                       </div>
                       <span className="px-2 py-1 text-xs font-medium text-gray-800 bg-gray-200 rounded">
                         {campaign.category}
                       </span>
                     </div>
                     <div className="mb-4">
-                      <div className="relative w-full h-2 bg-gray-200 rounded-full">
-                        <div
-                          className="absolute h-full bg-blue-600 rounded-full"
-                          style={{ width: `${(campaign.raised / campaign.goal) * 100}%` }}
-                        ></div>
-                      </div>
+                      <div className="relative w-full h-2 bg-gray-200 rounded-full"></div>
                       <div className="flex justify-between text-sm mt-2">
-                        <span className="font-medium">
-                          NLe{campaign.raised.toLocaleString()} raised
-                        </span>
-                        <span className="text-gray-500">NLe{campaign.goal.toLocaleString()} goal</span>
+                        <span className="text-gray-500">NLe{campaign.fundingGoal.toLocaleString()} goal</span>
                       </div>
                     </div>
                     <div className="flex justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center">
                         <Calendar className="h-4 w-4 mr-1" />
-                        <span>{campaign.daysLeft} days left</span>
+                        <span>Time Left: {campaign.completionDate}</span>
                       </div>
                       <div className="flex items-center">
                         <Users className="h-4 w-4 mr-1" />
-                        <span>{campaign.backers} backers</span>
+                        <span>{campaign.teamInformation} backers</span>
                       </div>
                     </div>
                     <Link to='/campaigndetails'>

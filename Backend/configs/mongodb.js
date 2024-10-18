@@ -7,7 +7,7 @@ const connectDB = async () => {
   await mongoose.connect(process.env.DATABASE_URL, {
    
   })
-    
+   console.log("Connect to MongoDB") 
 }catch(err) {
   console.log('MongoDB connection unsuccessful, retry after 5 seconds.');
   setTimeout(connectDB, 5000);

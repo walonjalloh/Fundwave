@@ -1,27 +1,17 @@
 import { Menu } from "lucide-react";
 import { logo } from "../assets/assets";
 import { useState } from "react";
-import SignIn from './SignIn'; 
-import Modal from './Modal'; 
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false); 
-    const [modalContent, setModalContent] = useState(null); // To toggle between SignIn and Form
+    const [isOpen, setIsOpen] = useState(false)
+    const {isAuthenticated, handleLogout} = useContext(AuthContext)
+  
 
     function hanldeopen() {
         setIsOpen(!isOpen);
-    }
-
-    function handleLoginModalOpen() {
-        setModalContent(<SignIn />); // Show SignIn component
-        setIsModalOpen(true); 
-    }
-
-
-    function handleModalClose() {
-        setIsModalOpen(false); 
     }
 
     return (
@@ -35,19 +25,21 @@ function Navbar() {
                         <Link to='/how_it_works'><p className="font-thin hidden md:flex ">How it works</p>
                         </Link>
                     </div>
-                    <div className="hidden md:flex items-center gap-3 lg:gap-5">
+                    {!isAuthenticated && (
+                        <div className="hidden md:flex  items-center gap-3 lg:gap-5">
                         <input 
                             type="text" 
                             placeholder="Search" 
                             className="border-2 border-gray-300 w-[200px] lg:w-[300px] px-2 py-1 rounded-md focus:outline-none" 
                         />
-                        <button 
-                            className="border-2 border-gray-800 px-2 py-1 rounded-md text-sm lg:text-lg lg:py-1"
-                            onClick={handleLoginModalOpen}
-                        >
-                            Log In
+                       <Link to='/login'>
+                       <button
+                            className="border-2 border-blue-700 bg-blue-700 text-white px-2 py-1 rounded-md text-sm lg:text-lg lg:py-1"
+                        > 
+                            Sign In
                         </button>
-                        <Link to='/signup'>
+                       </Link>
+                        <Link to='/register'>
                         <button
                             className="border-2 border-blue-700 bg-blue-700 text-white px-2 py-1 rounded-md text-sm lg:text-lg lg:py-1"
                         > 
@@ -55,13 +47,20 @@ function Navbar() {
                         </button>
                         </Link>
                     </div>
+                    )}
+                    {isAuthenticated && (
+                        <div className="hidden md:flex gap-2 ">
+                            <Link to='/profile'><button className="text-blue-500 font-bold">Profile</button></Link>
+                            <button onClick={handleLogout}>logout</button>
+                        </div>
+                    )}
                     <div className="md:hidden">
                         <Menu onClick={hanldeopen} className="cursor-pointer" />
                     </div>
                 </div>
             </nav>
             {isOpen && (
-                <div className="flex flex-col md:hidden mx-4 gap-4 pb-4">
+                <div className="flex flex-col md:hidden mx-4 gap-2 pb-3">
                     <input 
                         type="text" 
                         placeholder="Search" 
@@ -69,25 +68,29 @@ function Navbar() {
                     />
                     <Link to='/how_it_works'><p className="font-thin text-center text-blue-500">How it works</p>
                     </Link>
-                    <button 
-                        className="border-2 border-gray-800 px-4 py-2 text-sm rounded-md"
-                        onClick={handleLoginModalOpen}
+                    {!isAuthenticated && (
+                        <div className="flex flex-col gap-2">
+                            <Link to='/login' className="w-full "><button 
+                        className="border-2 border-gray-800 px-4 py-2 w-full text-sm rounded-md"
                     >
                         Login
-                    </button>
-                    <Link to='/signup'>
+                    </button></Link>
+                    <Link to='/register'>
                     <button 
                         className="border-2 border-blue-700 bg-blue-700 w-full text-white px-4 py-2 text-sm rounded-md"
                     >
                         Sign up
                     </button>
                     </Link>
+                        </div>
+                    )}
+                    {isAuthenticated && (
+                         <div className="flex flex-col items-center justify-center gap-2 ">
+                            <Link to='/profile'><button className="text-blue-500 font-bold">Profile</button></Link>
+                         <button onClick={handleLogout}>logout</button>
+                     </div>
+                    )}
                 </div>
-            )}
-            {isModalOpen && (
-                <Modal onClose={handleModalClose}>
-                    {modalContent}
-                </Modal>
             )}
         </header>
     );

@@ -1,69 +1,11 @@
-import { useState } from "react";
 import { g2_logo, f_logo } from "../assets/assets";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
 import { Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 function Form() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [capitalCity, setCapitalCity] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [country, setCountry] = useState('');
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-
-
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    // Clear any previous messages
-    setError('');
-    setSuccess('');
-
-    const data = {
-      firstName,
-      lastName,
-      email,
-      password,
-      country,
-      capitalCity,
-      phoneNumber
-    };
-
-    try {
-      const response = await fetch('http://localhost:3800/users/signup', { // Added http:// to the URL
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        setError(errorData.message || 'An error occurred');
-        return;
-      }
-
-      const result = await response.json();
-      console.log(result);
-      setSuccess('Sign up successful!');
-
-      // Clear the form fields
-      setFirstName('');
-      setLastName('');
-      setEmail('');
-      setPassword('');
-      setCountry('');
-      setCapitalCity('');
-      setPhoneNumber('');
-    } catch (error) {
-      console.error(error);
-      setError('An error occurred while signing up');
-    }
-  };
+  const { firstName, lastName,phoneNumber,capitalCity,country,email,password,handleSignUp,setCapitalCity,setCountry,setEmail,setFirstName,setLastName,setPassword,setPhoneNumber} = useContext(AuthContext)
 
 
 
@@ -76,18 +18,12 @@ function Form() {
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="flex flex-col items-center bg-white p-6 md:p-8 w-full max-w-lg shadow-lg rounded-xl">
+      <form onSubmit={handleSignUp} className="flex flex-col items-center bg-white p-6 md:p-8 w-full max-w-lg shadow-lg rounded-xl">
         {/* Title */}
         <div className="flex flex-col mb-5">
           <p className="text-2xl font-bold text-gray-800">Sign Up</p>
           <p className="text-md font-medium text-gray-500">Enter your details to create your account</p>
         </div>
-
-        {/* Error Message */}
-        {error && <p className="text-red-600 mb-4">{error}</p>}
-
-        {/* Success Message */}
-        {success && <p className="text-green-600 mb-4">{success}</p>}
 
         {/* Input Fields */}
         <div className="flex flex-col gap-4 w-full">
@@ -142,18 +78,6 @@ function Form() {
               className="border border-gray-300 px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-
-          {/* <div className="flex flex-col">
-            <label htmlFor="confirm_password" className="font-semibold text-lg">Confirm Password</label>
-            <input
-              type="password"
-              name="confirm_password"
-              placeholder="Confirm Password"
-              required
-              className="border border-gray-300 px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div> */}
-
           <div className="flex flex-col">
             <label htmlFor="capitalCity" className="font-semibold text-lg">Capital City</label>
             <input
@@ -216,7 +140,13 @@ function Form() {
         >
           Sign Up
         </button>
+        <Link to='/login' className="mt-2 text-center text-blue-500">or sign in to an existing account</Link>
       </form>
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+      />
     </div>
   );
 }

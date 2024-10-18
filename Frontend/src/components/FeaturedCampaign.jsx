@@ -1,9 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaXTwitter, FaFacebookF } from 'react-icons/fa6';
-import { cards } from '../../utils/cards';
+import { useContext } from 'react';
+import holder from '../assets/holder.png'
+import AuthContext from '../context/AuthContext';
 
 const FeaturedCampaign = () => {
+  const {campaignList, handleInfo} = useContext(AuthContext)
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -13,12 +15,12 @@ const FeaturedCampaign = () => {
           </span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cards.map((card) => (
-            <div key={card.key} className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+          {campaignList.map((card) => (
+            <div key={card._id} className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
               <div className="relative">
                 <img
-                  src={card.img}
-                  alt={card.details}
+                  src={holder}
+                  alt={card.campaignName}
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
@@ -26,11 +28,11 @@ const FeaturedCampaign = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-2 truncate">{card.details}</h3>
+                <h3 className="font-bold text-xl mb-2 truncate">{card.campaignDescription}</h3>
                 <div className="mb-4">
                   <div className="flex justify-between text-sm text-gray-600 mb-1">
                     <span>Raised: NLe{card.money_raised}</span>
-                    <span>Goal: NLe{card.goal}</span>
+                    <span>Goal: NLe{card.fundingGoal}</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div 
@@ -61,7 +63,9 @@ const FeaturedCampaign = () => {
                   to="/campaigndetails" 
                   className="text-blue-600 hover:text-blue-800 font-medium"
                 >
-                  Learn more...
+                  <button onClick={() => handleInfo(card._id)}>
+                    learn more.....
+                  </button>
                 </Link>
               </div>
             </div>

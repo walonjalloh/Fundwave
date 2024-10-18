@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Calendar, MessageCircle, Share2, ThumbsUp, Users, Shield } from 'lucide-react';
+import  { useState } from 'react';
+import { Calendar, MessageCircle, Share2, ThumbsUp, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { water } from '../assets/assets';
 

@@ -37,7 +37,7 @@ const HowItWorks = () => {
         </h1>
         <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
           FundWave empowers you to raise funds for your projects and support
-          causes you care about. Here's our simple four-step process:
+          causes you care about. Here is our simple four-step process:
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
           {steps.map((step, index) => (
@@ -55,7 +55,7 @@ const HowItWorks = () => {
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Ready to make a difference?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/start-campaign" className="w-full sm:w-auto">
-             <Link to='/campaigncreate'><button className="w-full sm:w-auto bg-blue-600 text-white py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 flex items-center justify-center text-lg font-semibold">
+             <Link to='/createcampaign'><button className="w-full sm:w-auto bg-blue-600 text-white py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 flex items-center justify-center text-lg font-semibold">
                 Start a Campaign
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button></Link>

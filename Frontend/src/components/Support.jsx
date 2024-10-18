@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Calendar, Heart, Shield, Users } from 'lucide-react';
+import { useState } from 'react';
+import { Calendar, Heart,  Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { water } from '../assets/assets';
 
@@ -60,7 +60,7 @@ const SupportCampaign = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2">Support This Campaign</h2>
-                <p className="text-gray-600 mb-4">Choose how you'd like to contribute</p>
+                <p className="text-gray-600 mb-4">Choose how you would like to contribute</p>
                 <div className="space-y-4">
                   <div className="grid grid-cols-3 gap-4">
                     {predefinedAmounts.map((amount) => (

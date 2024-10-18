@@ -1,8 +1,36 @@
 import { useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+import { ToastContainer } from "react-toastify";
 
 function Campaign() {
   const [activeSection, setActiveSection] = useState('basic');
+  const {
+    handleCreateCampaign,
+    campaignDescription,
+    campaignName,
+    fundingGoal,
+    amountNeeded,
+    completionDate,
+    risksAndChallenges,
+    milestoneTitle,
+    category,
+    email,
+    teamInformation,
+    expectedImpact,
+    setAmountNeeded,
+    setCampaignDescription,
+    setCampaignName,
+    setCategory,
+    setFundingGoal,
+    setRisksAndChallenges,
+    setCompletionDate,
+    setMilestoneTitle,
+    setEmail,
+    setTeamInformation,
+    setExpectedImpact
+  } = useContext(AuthContext)
 
   const handleSectionChange = (section) => {
     setActiveSection(section);
@@ -38,15 +66,28 @@ function Campaign() {
             </button>
           </div>
 
-          <form>
+          <form onSubmit={handleCreateCampaign}>
             {activeSection === 'basic' && (
               <div className="space-y-6">
+                <div>
+                  <label htmlFor="user email" className="block text-lg font-semibold mb-2">User Email</label>
+                  <input
+                    type="email"
+                    id="user email"
+                    placeholder="User Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
                 <div>
                   <label htmlFor="campaign_name" className="block text-lg font-semibold mb-2">Campaign Name</label>
                   <input
                     type="text"
                     id="campaign_name"
                     placeholder="Campaign Name"
+                    value={campaignName}
+                    onChange={(e) => setCampaignName(e.target.value)}
                     className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -55,6 +96,8 @@ function Campaign() {
                   <textarea
                     id="campaign_description"
                     placeholder="Campaign Description"
+                    value={campaignDescription}
+                    onChange={(e) => setCampaignDescription(e.target.value)}
                     className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
@@ -64,6 +107,8 @@ function Campaign() {
                     type="text"
                     id="funding_goal"
                     placeholder="Funding Goal"
+                    value={fundingGoal}
+                    onChange={(e) => setFundingGoal(e.target.value)}
                     className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -73,6 +118,8 @@ function Campaign() {
                     type="text"
                     id="category"
                     placeholder="Category"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
                     className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -89,6 +136,8 @@ function Campaign() {
                         type="text"
                         id="milestone_title"
                         placeholder="Milestone Title"
+                        value={milestoneTitle}
+                        onChange={(e) => setMilestoneTitle(e.target.value)}
                         className="border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
@@ -98,6 +147,8 @@ function Campaign() {
                         type="text"
                         id="amount_needed"
                         placeholder="Amount Needed"
+                        value={amountNeeded}
+                        onChange={(e) => setAmountNeeded(e.target.value)}
                         className="border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
@@ -106,6 +157,8 @@ function Campaign() {
                       <input
                         type="date"
                         id="completion_date"
+                        value={completionDate}
+                        onChange={(e) => setCompletionDate(e.target.value)}
                         className="border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
@@ -127,6 +180,8 @@ function Campaign() {
                   <textarea
                     id="team_info"
                     placeholder="Team Information"
+                    value={teamInformation}
+                    onChange={(e) => setTeamInformation(e.target.value)}
                     className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
@@ -135,6 +190,8 @@ function Campaign() {
                   <textarea
                     id="expected_impact"
                     placeholder="Expected Impact"
+                    value={expectedImpact}
+                    onChange={(e) => setExpectedImpact(e.target.value)}
                     className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
@@ -143,16 +200,10 @@ function Campaign() {
                   <textarea
                     id="risks_challenges"
                     placeholder="Risks and Challenges"
+                    value={risksAndChallenges}
+                    onChange={(e) => setRisksAndChallenges(e.target.value)}
                     className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
-                </div>
-                <div>
-                  <label htmlFor="supporting_document" className="block text-lg font-semibold mb-2">Supporting Document</label>
-                  <input
-                    type="file"
-                    id="supporting_document"
-                    className="w-full max-w-2xl border-2 border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
                 </div>
               </div>
             )}
@@ -167,6 +218,7 @@ function Campaign() {
             </div>
           </form>
         </div>
+        <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false}/>
       </div>
     </section>
   );

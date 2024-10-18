@@ -36,7 +36,7 @@ export default function AboutUs() {
             <p className="text-lg mb-4">
               Whether it is helping a family in need, supporting a local charity, or funding a groundbreaking project, we are here to make fundraising accessible, transparent, and impactful.
             </p>
-            <Link to='/campaigncreate'><button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Start a Campaign</button></Link>
+            <Link to='/createcampaign'><button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Start a Campaign</button></Link>
           </div>
           <div className="relative h-64 md:h-full">
             <img
