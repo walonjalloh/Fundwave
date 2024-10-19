@@ -5,7 +5,7 @@ import Layout from "./components/Layout";
 import HomePage from './pages/HomePage'
 import HowItWorks from "./components/HowItWorks";
 import LearnMore from "./components/LearnMore";
-import SignUp from "./components/SignUp";
+import SignUp from './components/SignUp';
 import Policy from "./components/Policy";
 import ContactUs from "./components/ContactUs";
 import Explore from "./components/Explore";
