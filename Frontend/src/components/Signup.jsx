@@ -4,7 +4,7 @@ import AuthContext from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
-function Form() {
+function SignUp() {
   const { firstName, lastName,phoneNumber,capitalCity,country,email,password,handleSignUp,setCapitalCity,setCountry,setEmail,setFirstName,setLastName,setPassword,setPhoneNumber} = useContext(AuthContext)
 
 
@@ -151,4 +151,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default SignUp;
